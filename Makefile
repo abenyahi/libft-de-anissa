@@ -25,10 +25,13 @@ SRCS = ft_isalpha.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
        	ft_atoi.c \
+		ft_bzero.c \
+		ft_memset.c \
+		ft_memcpy.c \
+		ft_memcmp.c \
 
 # Objets
 OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 # Règles
 all: $(NAME)
@@ -36,18 +39,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
-
+	$(RM) $(OBJS)
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: clean fclean re
