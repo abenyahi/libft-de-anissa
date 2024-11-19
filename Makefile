@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/19 22:04:59 by abenyahi          #+#    #+#              #
+#    Updated: 2024/11/19 22:05:01 by abenyahi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # Nom de la bibliothèque
 NAME = libft.a
 
@@ -30,6 +42,8 @@ SRCS = ft_isalpha.c \
 		ft_memcpy.c \
 		ft_memcmp.c \
 		ft_memchr.c \
+		ft_calloc.c \
+		ft_strdup.c \
 
 # Objets
 OBJS = $(SRCS:.c=.o)

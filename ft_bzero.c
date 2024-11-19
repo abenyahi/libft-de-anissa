@@ -6,12 +6,11 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:57:19 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/08 19:09:37 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:43:31 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -28,6 +27,8 @@ void	ft_bzero(void *s, size_t n)
 }
 
 /*
+#include <stdio.h>
+
 int main()
 {
 	char    str[] = "kdhs";

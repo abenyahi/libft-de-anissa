@@ -3,29 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenyahi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:05:59 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/10/23 18:20:53 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 22:56:59 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, int size)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	a;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
+	size_t			a;
 
+	tmp1 = (unsigned char *) s1;
+	tmp2 = (unsigned char *) s2;
 	a = 0;
-	while (s1[a] && s2[a] && a < size)
+	while (tmp1[a] && tmp2[a] && a < n)
 	{
-		if (s1[a] != s2[a])
-			return (s1[a] - s2[a]);
+		if (tmp1[a] != tmp2[a])
+			return (tmp1[a] - tmp2[a]);
 		a++;
 	}
 	return (0);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
 	char s1[] = "ca ";

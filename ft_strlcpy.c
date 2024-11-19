@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenyahi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:00:41 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/10/23 18:02:29 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 23:05:38 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strlcpy(char *dest, char *src, int size)
+char	*ft_strlcpy(char *dest, const char *src, int size)
 {
 	int	a;
 
@@ -25,6 +25,8 @@ char	*ft_strlcpy(char *dest, char *src, int size)
 	return (dest);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
 	char tab[] = "hola";

@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 17:57:41 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/19 23:37:46 by abenyahi         ###   ########.fr       */
+/*   Created: 2024/11/19 23:25:37 by abenyahi          #+#    #+#             */
+/*   Updated: 2024/11/20 00:06:40 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_strlcat(char *dest, char *src, int size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	char	*dest;
 
 	i = 0;
-	j = 0;
-	while (dest[i])
+	if (s[i] == NULL)
+		return (NULL);
+	dest = malloc(len - start + 1);
+	while (i < len)
+	{ 
+		dest[i] = s[start];
 		i++;
-	while (src[j] && i < size)
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
+		start++;
 	}
-	return (ft_strlen(dest) + ft_strlen(src));
+	if (dest[i] == '\0')
+	return (dest);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main() 
-{
-    char dest[] = "Hello ";
-    char src[] = "World!";
-    
-    printf("%d\n", ft_strlcat(dest, src, 15));
-    printf("%s\n", dest);
-
-    return 0;
-}*/

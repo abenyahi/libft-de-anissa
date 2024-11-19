@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenyahi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:02:55 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/10/23 18:03:19 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 23:23:12 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *a)
+int	ft_strlen(const char *a)
 {
 	int	b;
 
@@ -22,6 +22,8 @@ int	ft_strlen(char *a)
 	return (b);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
 	printf("%d\n", ft_strlen("hello"));

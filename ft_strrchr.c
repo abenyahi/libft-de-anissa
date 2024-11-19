@@ -6,16 +6,16 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:55:15 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/08 22:11:07 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 22:13:09 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	a;
-	unsigned char *tmp;
+	int				a;
+	unsigned char	*tmp;
 
 	tmp = (unsigned char *)s;
 	a = 0;
@@ -31,6 +31,8 @@ char	*ft_strrchr(const char *s, int c)
 	return ((char *)&tmp[a]);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
 	char tab[] = "bonjour";

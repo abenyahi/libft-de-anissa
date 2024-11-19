@@ -6,7 +6,10 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:55:40 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/08 18:55:42 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:45:27 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+#include "libft.h"
 
+void	*ft_memmove(void *dst, const void *src, size_t len)*/

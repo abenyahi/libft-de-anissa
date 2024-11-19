@@ -6,11 +6,11 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:54:44 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/08 19:54:27 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:51:00 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isspace(char a)
 {
