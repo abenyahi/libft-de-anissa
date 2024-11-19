@@ -1,16 +1,16 @@
-+/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenyahi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:03:56 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/10/23 18:05:19 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:14:59 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(char *a, char *b, int size)
 {
@@ -32,6 +32,8 @@ char	*ft_strnstr(char *a, char *b, int size)
 	return (NULL);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
 	char i[] = "jetuielilelleonnousvousilsellesiels";

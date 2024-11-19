@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:55:15 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/10/27 03:35:13 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:11:07 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,26 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	a;
+	unsigned char *tmp;
 
+	tmp = (unsigned char *)s;
 	a = 0;
-	while (s[a])
-	{
+	while (tmp[a])
 		a++;
-	}
 	if (c == '\0')
-		return ((char *)&s[a]);
-	while (s[a] != c)
-	{
+		return ((char *)&tmp[a]);
+	a--;
+	while (tmp[a] != c && tmp[a])
 		a--;
-	}
-	return ((char *)&s[a]);
+	if (a < 0)
+		return (NULL);
+	return ((char *)&tmp[a]);
 }
 /*
 int main()
 {
-	char tab[] = "sulat salut";
-	int to_find = 'a';
+	char tab[] = "bonjour";
+	int to_find = 'b';
 
-	printf("%s \n", ft_strrchr(tab, to_find));
+	printf("%s \n", ft_strrchr(tab + 2, to_find));
 }*/

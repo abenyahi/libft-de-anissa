@@ -29,6 +29,7 @@ SRCS = ft_isalpha.c \
 		ft_memset.c \
 		ft_memcpy.c \
 		ft_memcmp.c \
+		ft_memchr.c \
 
 # Objets
 OBJS = $(SRCS:.c=.o)
