@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:05:59 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/19 22:56:59 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:45:38 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	tmp1 = (unsigned char *) s1;
 	tmp2 = (unsigned char *) s2;
 	a = 0;
-	while (tmp1[a] && tmp2[a] && a < n)
+	if (n == 0)
+		return (0);
+	while ((tmp1[a] || tmp2[a]) && a < n)
 	{
 		if (tmp1[a] != tmp2[a])
 			return (tmp1[a] - tmp2[a]);

@@ -6,24 +6,24 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:52:31 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/19 21:48:11 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:06:01 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int find)
+char	*ft_strchr(const char *s, int c)
 {
 	int	a;
 
 	a = 0;
 	while (s[a])
 	{
-		if (s[a] == find)
+		if (s[a] == c)
 			return ((char *)&s[a]);
 		a++;
 	}
-	if (find == '\0')
+	if (c == '\0')
 		return ((char *)&s[a]);
 	return (NULL);
 }
