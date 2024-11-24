@@ -6,12 +6,11 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:55:48 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/21 19:06:49 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:37:35 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

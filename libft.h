@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 22:04:49 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/24 19:31:26 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:37:28 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 // String functions
 size_t	ft_strlen(const char *s);
@@ -30,6 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
+char	*ft_strjoin(char const *s1, char const *s2);
 
 // Memory functions
 void	ft_bzero(void *s, size_t n);

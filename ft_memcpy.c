@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:55:36 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/19 21:58:40 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:05:51 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
+	char			*d;
 	const char		*s;
 	size_t			a;
 

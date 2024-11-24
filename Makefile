@@ -6,7 +6,7 @@
 #    By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 22:04:59 by abenyahi          #+#    #+#              #
-#    Updated: 2024/11/24 19:31:39 by abenyahi         ###   ########.fr        #
+#    Updated: 2024/11/24 20:37:26 by abenyahi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRCS = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_striteri.c \
 		ft_strmapi.c \
+		ft_strjoin.c \
 
 # Objets
 OBJS = $(SRCS:.c=.o)
