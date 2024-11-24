@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 22:04:49 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/24 17:51:05 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/24 19:31:26 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 
 // Memory functions
 void	ft_bzero(void *s, size_t n);
