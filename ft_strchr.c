@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:52:31 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/21 19:06:01 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:40:10 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	a = 0;
 	while (s[a])
 	{
-		if (s[a] == c)
+		if (s[a] == (unsigned char)c)
 			return ((char *)&s[a]);
 		a++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)&s[a]);
 	return (NULL);
 }

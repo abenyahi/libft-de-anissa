@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 18:14:45 by Nathan            #+#    #+#             */
-/*   Updated: 2024/11/24 17:10:49 by abenyahi         ###   ########.fr       */
+/*   Created: 2024/11/24 17:49:30 by abenyahi          #+#    #+#             */
+/*   Updated: 2024/11/24 17:54:45 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putendl_fd(char *s, int fd)
+void	charupper(unsigned int index, char *charar)
 {
-	ft_putstr_fd(s, fd);
-	ft_putstr_fd("\n", fd);
+	charar[index] = 'a';
 }
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	int	index;
 
-/*
+	index = 0;
+	while (s[index])
+	{
+		f(index, s);
+		index ++;
+	}
+	
+}
 int	main(void)
 {
-	int fd = open ("test.txt",O_CREAT | O_RDWR, 00700);
-	ft_putendl_fd("coucou", fd);
-}*/
+	char	dest[] = "test";
+	ft_striteri(dest, charupper);
+	printf("%s", dest);
+}

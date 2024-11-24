@@ -5,38 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 18:03:56 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/19 21:14:59 by abenyahi         ###   ########.fr       */
+/*   Created: 2024/11/24 17:13:28 by abenyahi          #+#    #+#             */
+/*   Updated: 2024/11/24 17:14:05 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *a, char *b, int size)
+char	*ft_strnstr(const char *big, const char *little, size_t size)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (a[i] && i + j < size)
+	j = 0;
+	while (big[i] && i + j < size)
 	{
-		j = 0;
-		if (b[0] == '\0')
-			return (a);
-		while (a[i + j] == b[j] && a[i + j] && b[j])
+		if (little[0] == '\0')
+			return ((char *)big);
+		while (big[i + j] == little[j] && big[i + j]
+			&& little[j] && i + j < size)
 			j++;
-		if (b[j] == '\0')
-			return (&a[i]);
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
+		j = 0;
 		i++;
 	}
+	if (little[j] == '\0')
+		return ((char *)&big[i]);
 	return (NULL);
 }
 /*
 #include <stdio.h>
 
-int main()
+int mbigin()
 {
-	char i[] = "jetuielilelleonnousvousilsellesiels";
-	char j[] = "ls";
+	chbigr i[] = "jetuielilelleonnousvousilsellesiels";
+	chbigr j[] = "ls";
 	printf("%s\n", ft_strnstr(i, j, 15));
 }*/

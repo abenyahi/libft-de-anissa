@@ -6,7 +6,7 @@
 /*   By: abenyahi <abenyahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:25:37 by abenyahi          #+#    #+#             */
-/*   Updated: 2024/11/21 19:53:29 by abenyahi         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:22:16 by abenyahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		dest[i] = '\0';
 		return (dest);
 	}
+	if (ft_strlen(&s[start]) < len)
+		len = ft_strlen(&s[start]);
 	dest = malloc(len + 1);
 	if (dest == NULL)
 		return (NULL);
-	while (i < len && s[start])
+	while (i < len)
 	{
 		dest[i] = s[start];
 		i++;
